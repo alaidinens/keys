@@ -8,7 +8,25 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
+<style>
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
 
+}
+input[type=submit] {
+  padding: 12px 30px;
+  margin: 8px 130px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: #79cf3d;
+  border-radius: 20px;
+}
+
+</style>
 </head>
 
 <header class = "header">
@@ -23,11 +41,15 @@
     <div id="upper" class="rectangleup"></div>
     <div id="left" class="rectangledown"></div>
 
-    <form action="pievienot">
+    <h2 class = "heading_info">
+        <span>Ievadiet jauno ierakstu</span>
+    </h2>
+
+    <form class="info">
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname"><br><br>
         <label for="lname">Last name:</label>
         <input type="text" id="lname" name="lname"><br><br>
         <input type="submit" value="Submit">
-      </form>
+    </form>
 </body>
