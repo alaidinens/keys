@@ -233,9 +233,16 @@ th {
 }
 
 .info{
-    
     position: center;
     padding-top: .5rem;
     padding-bottom: .5rem;
-    margin: 10rem -15rem 0rem 82rem;
+    margin: 5rem -15rem 0rem 82rem;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
 }
