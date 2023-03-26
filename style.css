@@ -21,18 +21,6 @@ html{
     height: 1024px;
 }
 
-html::-webkit-scrollbar{
-    width: .8rem;
-}
-
-html::-webkit-scrollbar-track{
-    background: transparent;
-}
-
-html::-webkit-scrollbar-thumb{
-    background: #fff;
-    border-radius: 5rem;
-}
 
 body {
     background: var(--bg);
@@ -83,11 +71,6 @@ body {
     height: 1024px;
 }
 
-.header .navbar a:hover{
-    color:var(--main-color);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
-}
 
 nav {
     text-align: center;
