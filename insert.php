@@ -1,28 +1,33 @@
 <?php
 
-$skol_vards =$_POST['skol_vards'];
-$skol_uzvards =$_POST['skol_uzvards'];
-$klases_nr =$_POST['klases_nr'];
-$skolotaja =$_POST['skolotaja'];
+if(isset($_POST['submit']))
+  {
+    $vards = $_POST['vards'];
+    $uzvards = $_POST['uzvards'];
+    $num = $_POST['num'];
+    $atb = $_POST['atb'];
 
-
-if (!empty($skol_vards || (!empty($skol_uzvards) || (!empty($klases_nr) || (!empty($skolotaja)) {
-  $host = "localhost";
-  $dbUsername = "root";
-  $dbPassword = "Lolesha161204";
-  #dbname = "teachers";
+    $host = "localhost";
+    $dbUsername = "root";
+    $dbPassword = "Lolesha161204";
+    $dbname = "teachers_keys";
   
-  $conn = new mysqli($host, $dbUsernmae, $dbPassword, $dbname);
-  
-  if (mysqli_connect_error()){
-    die('Connect Error('.mysqli_connect_error().')'.mysqli_connect_error());
-  } else {
-      $select = "select"
-      $INSERT = "INSERT Into register (skol_vards, skol_uzvards, klases_nr, skolotaja) values (?, ?, ?, ?)";
+    //create connection
+    $con = mysqli_connect($host, $username, $password, $dbname);
+    //check connection if it is working or not
+    if (!$con){
+      die("Connection failed!" . mysqli_connect_error());
+    }
+    //This below line is a code to Send form entries to database
+    $sql = "INSERT INTO contactform_entries (id, name_fld, email_fld, msg_fld) VALUES ('0', '$vards', '$uzvards', '$num', '$atb')";
+    //fire query to save entries and check it with if statement
+    $rs = mysqli_query($con, $sql);
+    if($rs){
+      echo "Message has been sent successfully!";
+    }else{
+      echo "Error, Message didn't send! Something's Wrong."; 
+    }
+    //connection closed.
+    mysqli_close($con);
   }
-} else {
-    echo "All fields are required"
-    die();
-}
-
 ?>

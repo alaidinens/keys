@@ -8,25 +8,26 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="style.css">
-<style>
-input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid black;
-  border-radius: 4px;
-  font-size: 12px;
-}
-input[type=submit] {
-  padding: 12px 30px;
-  margin: 8px 130px;
-  box-sizing: border-box;
-  border: 1px solid black;
-  background-color: #79cf3d;
-  border-radius: 20px;
-}
+    <style>
+    input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 12px;
+    }
 
-</style>
+    input[type=submit] {
+    padding: 12px 30px;
+    margin: 8px 130px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #79cf3d;
+    border-radius: 20px;
+    }
+
+    </style>
 </head>
 
 <header class = "header">
@@ -45,15 +46,18 @@ input[type=submit] {
         <span>Ievadiet jauno ierakstu</span>
     </h2>
     
-    <form class="info">
-        <label for="vards">Vārds:</label>
-        <input type="text" id="vards" name="vards"><br><br>
-        <label for="uzvards">Uzvārds:</label>
-        <input type="text" id="uzvards" name="uzvards"><br><br>
-        <label for="num">Klases Nr. :</label>
-        <input type="text" id="num" name="num"><br><br>
-        <label for="atb">Atbildīgs:</label>
-        <input type="text" id="atb" name="atb"><br><br>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="form">
+        <form method="POST" action="insert.php" class="info">
+            <label for="vards">Vārds:</label>
+            <input type="text" placeholder="John" name="vards" id=""><br><br>
+            <label for="uzvards">Uzvārds:</label>
+            <input type="text" id="uzvards" placeholder="Kalnins" name="uzvards"><br><br>
+            <label for="num">Klase:</label>
+            <input type="text" placeholder="11b" name="num" id=""><br><br>
+            <label for="atb">Atbildīgs:</label>
+            <input type="text" placeholder="Atbildīga persona" name="atb" id=""><br><br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
 </body>
+</html>
